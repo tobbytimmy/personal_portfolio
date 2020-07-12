@@ -1,1 +1,7 @@
-Hello Blog
+<h1>Blog</h1>
+
+{% for blog in Blogs %}
+<h2>{{ blog.title }}</h2>
+{{ blog.date }}
+<p>{{ blog.content }}</p>
+{% endfor %}
