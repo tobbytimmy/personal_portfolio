@@ -7,8 +7,8 @@ from .models import Blog
 
 
 def all_blogs(request):
-    blogs = Blog.objects.all().order_by('-date')
-    return render(request, "blog/all_blogs.html", {"Blogs": blogs})
+    Blogs = Blog.objects.all().order_by('-date')
+    return render(request, "blog/all_blogs.html", {"Blogs": Blogs})
 
 def detail(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
